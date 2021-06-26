@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #252525;
+            color: #fff;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        .container{
+            width: 620px;
+            margin: 0 auto;
+        }
+        .cross{
+            display: flex;
+        }
+        .cross svg{
+            cursor: pointer;
+            margin-left: auto;
+            margin-bottom: 15px;
+        }
+        .closable{
+            padding: 15px;
+            margin: 15px;
+        }
+        #closable-title{
+            background-color: darkorchid;
+        }
+        #closable-element{
+            background-color: rebeccapurple;
+        }
+        #closable-croix{
+            background-color: mediumslateblue;
+        }
+        #closable-exemple{
+            background-color: darkslateblue;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="closable-title" class="closable">
+            <div class="js-close cross" data-target="closable-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                </svg>
+            </div>
+            <h1>Closable.js</h1>
+            <p>Créer des <strong>éléments</strong> dôtés d'un <strong>bouton</strong> pour le fermer et le faire disparaître.</p>
+        </div><!--/closable-title-->
+
+        <div id="closable-element" class="closable">
+            <div class="js-close cross" data-target="closable-element">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                </svg>
+            </div>
+            <h1>L'élément fermable</h1>
+            <p>L'élément voué à être fermé doit avoir une <strong>id</strong>, quelle qu'elle soit. Ainsi, le boutton pourra repérer et selectionné l'élément grâce à cet id.</p>
+        </div><!--/closable-element-->
+    
+        <div id="closable-croix" class="closable">
+            <div class="js-close cross" data-target="closable-croix">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                </svg>
+            </div>
+            <h1>Le boutton</h1>
+            <p>Le boutton doit posséder la <strong>classe "js-close"</strong>.</p>
+            <p>Le boutton doit également posséder un <strong>attribut "target"</strong> dont la valeur correspond à l'id de l'élément qu'il doit selectionné.</p>
+        </div><!--/closable-croix-->
+
+        <div id="closable-exemple" class="closable">
+            <div class="js-close cross" data-target="closable-exemple">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                </svg>
+            </div>
+            <h1>Exemple</h1>
+            <code>
+                &lt;div id="closable-exemple"&gt;
+                <br>
+                &lt;div js="js-close" data-target="closable-exemple"&gt;X&lt;/div&gt;
+                <br>
+                //...
+                <br>
+                &lt;/div&gt;
+            </code>
+        </div><!--/closable-exemple-->
+
+
+    </div><!--/container-->
+
+
+<script src="closable.js"></script>
+</body>
+</html>
